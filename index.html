@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>anvsha portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="navbar">
+
+            <div class="github">
+                <a href="" class="github_profile"></a>
+
+                <a href="https://github.com/anvsha5" target="_blank" class="github_username">anvsha5</a>
+            </div>
+
+            <div class="nav_links">
+                <a class="home" href="#first">Home</a>
+                <a class="home" href="#about">About</a>
+                <a class="home" href="#projects">Projects</a>
+                <a class="home" href="#contact">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="first_screen" id="first">
+
+        <main>
+            <div class="hero">
+                <div class="my_photo"></div>
+                <div class="hero_text">
+                    <div class="my_self">
+                        <pre>Hey, I'm Anushka Sawant
+An enthusiastic learner</pre>
+                    </div>
+                    <p>Keep exploring new things, to build best out of my curiosity✨</p>
+                    <div class="button">
+                        <button class="butt_projects" onclick="location.href='#projects'">View Projects ></button>
+                        <button class="butt_contact" onclick="location.href='#contact'">Contact me ></button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
+
+
+    <!-- About me -->
+    <section class="about" id="about">
+        <div class="about_content">
+            <h2>About Me</h2>
+            <p>Hi, I’m Anushka 👋
+
+                I’m a curious and growing learner 🌱 who enjoys exploring different areas of technology.
+                I’m not someone who wants to stick to just one thing — I like trying, learning, and discovering what
+                truly excites me.
+
+                Right now, I’m focusing on frontend development, building clean and responsive websites using HTML and
+                CSS
+                At the same time, I’m also exploring tools like Git, Github and other technologies to expand my skills.
+
+                For me, it’s all about learning, experimenting, and improving step by step.
+            </p>
+            <div class="about_extra">
+                <div class="about_card">
+                    <h3>🌱 Learning Mindset</h3>
+                    <p>Always exploring new technologies and improving step by step.</p>
+                </div>
+
+                <div class="about_card">
+                    <h3>💻 Frontend Focus</h3>
+                    <p>Currently building responsive websites using HTML, CSS.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Projects -->
+
+    <section class="projects" id="projects">
+        <div class="projects_content">
+            <h2>My Projects</h2>
+            <p>Curiosity → Learning → Growth 🌱</p>
+            <div class="project_links">
+                <div class="proj1">
+                    <div class="proj1_img"></div>
+                    <div class="buttons">
+                        <button onclick="location.href='https://anvsha5.github.io/Amazon-Clone/'">Live demo</button>
+                        <button onclick="location.href='https://github.com/anvsha5/Amazon-Clone'">View Code</button>
+                    </div>
+                    <p class="caution">⚠️ Just a clone, No real transactions or data collection involved.
+                    </p>
+                </div>
+                <div class="proj2">
+                    <div class="proj2_img"></div>
+                    <div class="buttons">
+                        <button onclick="location.href='https://anvsha5.github.io/Portfolio/'">Live demo</button>
+                        <button onclick="location.href='https://github.com/anvsha5/Portfolio'">View Code</button>
+                    </div>
+                </div>
+            </div>
+            <p id="more_projects"> more projects to come...</p>
+        </div>
+
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="contact_content">
+            <h2>Contact Me</h2>
+            <pre>Let’s Connect 🌱
+
+I’m always curious to learn, explore, and build new things.  
+If you’d like to collaborate or just connect, feel free to reach out!
+</pre>
+            <div class="contact_details">
+                <ul>
+                    <li class="links">📧 Email: <a
+                            href="https://mail.google.com/mail/?view=cm&fs=1&to=anushka1sawant@gmail.com">anushka1sawant@gmail.com</a>
+                    </li>
+                    <li class="links">💻 GitHub: <a href="https://github.com/anvsha5">https://github.com/anvsha5</a>
+                    </li>
+                    <li class="links">🔗 LinkedIn: <a
+                            href="https://linkedin.com/in/anushka-sawant-08b0b1386">https://linkedin.com/in/anushka-sawant-08b0b1386</a>
+                    </li>
+                </ul>
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(".home");
+
+        window.addEventListener("scroll", () => {
+            let current = "";
+
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop - 80;
+                const sectionHeight = section.clientHeight;
+
+                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            navLinks.forEach((link) => {
+                link.classList.remove("active");
+                if (link.getAttribute("href") === "#" + current) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,527 @@
+ *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+  --primary: #5A8DEE;
+  --dark: #1E3A8A;
+  --light: #E0F2FE;
+  --accent: #38BDF8;
+  --bg: #F8FAFC;
+  --text: #1E293B;
+  --text1: #123163;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.first_screen{
+    min-height: 100vh;
+}
+
+body{
+    background: linear-gradient(
+        135deg,
+        #eef2ff,
+        #e0ecff,
+        #f8fbff
+    );
+    padding-top: 60px;
+}
+
+
+.navbar{
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    background: white;
+
+    
+}
+
+.github{
+    height: 60px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-left: 30px;
+}
+
+.github_profile{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-image: url("images/anvsha5.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.3s;
+}
+
+.github_username{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--dark);
+    font-weight: bold;
+}
+
+.github_profile:hover{
+    transform: scale(1.1);
+}
+
+.github_username:hover{
+    text-decoration: underline;
+    font-weight: 1000;
+}
+
+.nav_links{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    gap: 30px;     
+}
+
+.home {
+    position: relative;
+    color: var(--dark);
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-right: 100px;
+    text-decoration: none;
+}
+
+.home::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 3px;
+    background-color: var(--dark);
+    transition: 0.3s ease;
+}
+
+.home:hover::after {
+    width: 100%;
+}
+
+.home.active {
+    color: var(--primary);
+}
+
+.home.active::after {
+    width: 100%;
+    background-color: var(--primary);
+}
+
+/* hero */
+
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    padding: 80px 10%;
+}
+
+.my_photo{
+    height: 510px;
+    width: 350px;
+    border-radius: 50px;
+    background-image: url("images/Anushka_linkedin.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+
+}
+
+.my_self{
+    position: relative;
+    left: 30px;
+
+}
+
+.my_self pre{
+    font-family: 'Great Vibes', cursive; 
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--text1);
+    padding-bottom: 30px;
+    line-height: 1.3;
+}
+
+.hero_text p{
+    position: relative;
+    left: 30px;
+    font-size: 1.2rem;
+    color: var(--text1);
+    font-family: 'Poppins', sans-serif;
+}
+
+.button{
+    height: 60px;
+    width: 100%;
+    flex-wrap: wrap;
+    position: relative;
+    left: 30px;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+} 
+
+
+.butt_projects{
+    height: 50px;
+    width: 150px;
+    border-radius: 12px;
+    font-size: 1rem;
+    background-color: var(--primary);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.butt_contact{
+    height: 50px;
+    width: 150px;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* About section */
+
+.about{
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;  
+    align-items: flex-start; 
+    flex-direction: column;
+    padding: 100px 10%;           
+}
+
+.about_content{ 
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+    margin-top: -5px; 
+}
+
+.about h2{
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--text1);
+    font-size: 2.5rem;
+    font-family: 'Great Vibes', cursive; 
+}
+
+.about p{
+    line-height: 1.6;
+    text-align: left;
+    font-size: 1.2rem;
+    color: var(--text1);
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.about_extra {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.about_card {
+    width: 250px;
+    padding: 15px;
+    background: #cecfd2;
+    border: 1px solid #dbeafe;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+
+/* Projects */
+
+.projects{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;  
+    align-items: flex-start; 
+    flex-direction: column;
+
+}
+
+.projects_content{
+    width: 100%;
+}
+
+.projects_content h2{
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--text1);
+    font-size: 2.5rem;
+    font-family: 'Great Vibes', cursive; 
+}
+
+.projects_content p{
+    line-height: 1.6;
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text1);
+    font-family: 'Poppins', sans-serif;
+}
+
+.project_links{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 60px;
+
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 12px;
+}
+
+/* proj1 */
+
+.proj1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.proj1_img{
+    height: 200px;
+    width: 400px;
+    background-image: url("images/amazon_clone.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top; 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+}
+
+.proj1 button{
+    height: 30px;
+    width: 150px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 20px;
+    background-color: white;
+    color: var(--primary);
+    border: 2px solid #b3c0d0;
+    cursor: pointer;
+}
+
+.caution{
+    margin-top: 12px;
+    padding: 8px 14px;
+    font-size: 0.9rem;          
+    line-height: 1.4;
+    color: #92400e;             
+    background-color: #fff7ed;  
+    border: 1px solid #facc15;  
+    border-radius: 8px;
+    max-width: 350px;           
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* proj2 */
+
+.proj2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.proj2_img{
+    height: 198px;
+    width: 400px;
+    background-image: url("images/portfolio.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top; 
+    border: 2px solid var(--dark);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+}
+
+.proj2 button{
+    height: 30px;
+    width: 150px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 20px;
+    background-color: white;
+    color: var(--primary);
+    border: 2px solid #b3c0d0;
+    cursor: pointer;
+}
+
+#more_projects{
+    font-size: 0.85rem;
+    font-style: italic;
+    text-align: right;
+    padding-right: 100px;
+}
+
+/* contact */
+
+.contact{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;  
+    align-items: flex-start; 
+    flex-direction: column;
+
+}
+
+.contact_content{
+    width: 100%;
+}
+
+.contact_content h2{
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--text1);
+    font-size: 2.5rem;
+    font-family: 'Great Vibes', cursive; 
+}
+
+.contact_content pre{
+    line-height: 1.6;
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text1);
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact_details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+.links{
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .github {
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    .nav_links {
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .home {
+        margin-right: 0;
+        font-size: 1rem;
+    }
+
+     .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        padding: 40px 5%;
+    }
+
+    .my_photo {
+        width: 250px;
+        height: 350px;
+    }
+
+    .my_self {
+        left: 0;
+    }
+
+    .hero_text p {
+        left: 0;
+    }
+
+    .button {
+        justify-content: center;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .about {
+        padding: 60px 5%;
+    }
+
+    .about_content {
+        padding: 20px;
+    }
+
+    .about_extra {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about_card {
+        width: 90%;
+    }
+
+    .project_links {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    #more_projects {
+        text-align: center;
+        padding-right: 0;
+    }
+
+    .contact_details {
+        padding-top: 50px;
+    }
+
+    .contact_content pre {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .links {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+}
+
