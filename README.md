@@ -7,7 +7,7 @@ This project showcases my work, learning journey, and projects as a frontend dev
 
 ## 🚀 Live Demo
 
-🔗 https://anvsha5.github.io/Portfolio/
+🔗 https://portfolio-eta-red-85.vercel.app
 
 ---
 
@@ -45,7 +45,7 @@ This project showcases my work, learning journey, and projects as a frontend dev
 * A frontend clone of Amazon homepage
 * Built using HTML & CSS
 
-🔗 Live: https://anvsha5.github.io/Amazon-Clone/
+🔗 Live: https://amazon-clone-brown-five-85.vercel.app/
 🔗 Code: https://github.com/anvsha5/Amazon-Clone
 
 ---
